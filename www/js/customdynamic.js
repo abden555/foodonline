@@ -1,5 +1,5 @@
 // JavaScript Document
-var main_url = 'http://project3/foodonline2/index.php/';
+var main_url = 'http://www.foodonline.ae/index.php/';
 $(function() {
 	
 	//To get cities
