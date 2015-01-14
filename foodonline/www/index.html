@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>nativeDroid - Theme for jQuery Mobile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.css" />
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.light.css"  id='jQMnDTheme' />
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.red.css" id='jQMnDColor' />
+		<!-- jQuery / jQueryMobile Scripts -->
+        <!-- Custom / Abden Nasir Css -->
+        <link rel="stylesheet" href="css/jquerymobilecustom.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/mustache.min.js"></script>
+    </head>
+    <body>
+     <div data-role="page" data-theme='b'>
+        <div data-role="panel" id="mypanel" data-theme="b">
+            <ul data-role="listview">
+                <li data-role="list-divider">Your wishes</li>
+                <li data-icon="coffee"><a href="#">Need a Coffee</a></li>
+                <li data-icon="beer"><a href="#">Have a Beer</a></li>
+                <li data-icon="music"><a href="#">Play Music</a></li>
+                <li data-icon="fire"><a href="#">Make a fire</a></li>
+                <li data-icon="bullhorn"><a href="#">Shout it loud</a></li>
+                <li data-icon="group"><a href="#">Meet friends</a></li>
+                <li data-icon="trophy"><a href="#">Win a Trophy</a></li>
+            </ul>
+        </div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <div class='inset text-center'>
+            	<div class="sep15px">&nbsp;</div>
+            	<a href='#mypanel' data-inline='true'><img src="images/mobile-icon.jpg" class="img-responsive"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="images/food-online-logo.jpg">
+                <div class="sep15px">&nbsp;</div>
+            </div>
+        </div>
+        <div data-role="content">   
+			<div class="fd-header">
+                <div class='inset'>
+                    <div class="pull-left">
+                        <a href="index.html" data-ajax="true"><i class='icon-home'></i></a>
+                    </div>
+                    <div class="pull-right">
+                    	<a href="index.html" data-ajax="true"><i class='icon-user color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Login</span></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="index.html" data-ajax="true"><i class='ui-icon-shopping-cart color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Basket</span></a>
+                    </div>
+                </div>
+            </div>	
+            <div class="fd-bannerIndex">
+                <div class='inset'>
+                    <div class="searchBlock text-center">
+                    		<script id="city-template" type="text/template">
+								{{#city}}
+									<option value="{{ZONEID}}" selected="select">{{zone}}</option>
+								{{/city}}
+							</script>
+                        	<select name="city" id="citydropdown" data-native-menu="true" class="fd-customselect">
+                            	<option value="">Select City</option>
+                            </select>
+                            <div class="sep10px">&nbsp;</div>
+                            <script id="area-template" type="text/template">
+								{{#area}}
+									<option value="{{AREAID}}">{{area}}</option>
+								{{/area}}
+							</script>
+                            <select name="area" id="areadropdown" data-native-menu="true" class="fd-customselect">
+                            	<option value="">Select Area</option>
+                            </select>
+                            <div class="sep10px">&nbsp;</div>
+                            <script id="cuisine-template" type="text/template">
+								{{#cuisines}}
+									<option value="{{CUISINEID}}">{{cuisine}}</option>
+								{{/cuisines}}
+							</script>
+                            <select name="cuisine" id="cuisinedropdown" data-native-menu="true" class="fd-customselect">
+                            	<option value="">Select Cuisine</option>
+                            </select>
+                            <div class="sep10px">&nbsp;</div>
+                            
+                            <a href="" class="btn btn-lg btn-customorange fonsize16px customwidthsearchbtn" data-ajax="true">Find Restaurants</a>
+                        
+                    </div>
+                    <div class="sep25px">&nbsp;</div>
+                    <div class="sep25px">&nbsp;</div>
+                </div>
+            </div>
+            <div class="ui-footer customfooter">
+            	<div class="inset">
+                	Copyright &copy; FoodOnline is a product by Middle East Infoway <?=date('Y')?>. All Rights Reserved. Dubai Registered Company #532868
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/customdynamic.js"></script>
+    <script type="text/javascript">
+		app.initialize();
+	</script>
+    </body>
+</html>
