@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>nativeDroid - Theme for jQuery Mobile</title>
+        <title>Foodonline</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
         <link rel="stylesheet" href="css/jquerymobile.css" />
@@ -14,37 +14,40 @@
 		<!-- jQuery / jQueryMobile Scripts -->
         <!-- Custom / Abden Nasir Css -->
         <link rel="stylesheet" href="css/jquerymobilecustom.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/bootstrap-select.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="js/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/customdynamic.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+			
+        </script>
     </head>
     <body>
-     <div data-role="page" data-theme='b'>
-        <div data-role="panel" id="mypanel" data-theme="b">
-            <ul data-role="listview">
-                <li data-role="list-divider">Your wishes</li>
-                <li data-icon="coffee"><a href="#">Need a Coffee</a></li>
-                <li data-icon="beer"><a href="#">Have a Beer</a></li>
-                <li data-icon="music"><a href="#">Play Music</a></li>
-                <li data-icon="fire"><a href="#">Make a fire</a></li>
-                <li data-icon="bullhorn"><a href="#">Shout it loud</a></li>
-                <li data-icon="group"><a href="#">Meet friends</a></li>
-                <li data-icon="trophy"><a href="#">Win a Trophy</a></li>
-            </ul>
-        </div>
+     <!--MAIN CONTENT-->
+     <div data-role="page" data-theme='b' id="home">
+     	<div data-role="panel" id="mypanel" data-theme="a" class="sidepanel"></div>
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
             <div class='inset text-center'>
             	<div class="sep15px">&nbsp;</div>
-            	<a href='#mypanel' data-inline='true'><img src="images/mobile-icon.jpg" class="img-responsive"></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/food-online-logo.jpg">
+            	<div class="pull-left">
+	                <a href='#mypanel' data-inline='true'><img src="images/mobile-icon.jpg" class="img-responsive"></a>
+                </div>
+                <div class="pull-right">
+                <a href="#home"><img src="images/food-online-logo.jpg"></a>
+                </div>
                 <div class="sep15px">&nbsp;</div>
             </div>
-        </div>
-        <div data-role="content">   
-			<div class="fd-header">
+            <div class="fd-header">
                 <div class='inset'>
                     <div class="pull-left">
-                        <a href="index.html" data-ajax="true"><i class='icon-home'></i></a>
+                        <a href="index.html" data-ajax="true"><i class='icon-home'>&nbsp;</i></a>
                     </div>
                     <div class="pull-right">
                     	<a href="index.html" data-ajax="true"><i class='icon-user color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Login</span></a>
@@ -52,59 +55,237 @@
                         <a href="index.html" data-ajax="true"><i class='ui-icon-shopping-cart color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Basket</span></a>
                     </div>
                 </div>
-            </div>	
+            </div>
+        </div>
+        <div data-role="content">   
+				
             <div class="fd-bannerIndex">
                 <div class='inset'>
                     <div class="searchBlock text-center">
+                    		
                     		<script id="city-template" type="text/template">
+							<select name="city" data-native-menu="true" class="selectpicker text-left necls">
+								<option value="" selected>Select City</option>
 								{{#city}}
-									<option value="{{ZONEID}}" selected="select">{{zone}}</option>
+									<option value="{{ZONEID}}">{{zone}}</option>
 								{{/city}}
+							</select>	
 							</script>
-                        	<select name="city" id="citydropdown" data-native-menu="true" class="fd-customselect">
-                            	<option value="">Select City</option>
-                            </select>
+                            <div id="citydropdown"></div>
                             <div class="sep10px">&nbsp;</div>
                             <script id="area-template" type="text/template">
+							<select name="area" id="areadropdown" data-native-menu="true" class="selectpicker text-left necls">
+								<option value="" selected>Select Area</option>
 								{{#area}}
 									<option value="{{AREAID}}">{{area}}</option>
 								{{/area}}
+							</select>	
 							</script>
-                            <select name="area" id="areadropdown" data-native-menu="true" class="fd-customselect">
-                            	<option value="">Select Area</option>
-                            </select>
+                            <div id="areadropdown"></div>
                             <div class="sep10px">&nbsp;</div>
                             <script id="cuisine-template" type="text/template">
+							<select name="cuisine" id="cuisinedropdown" data-native-menu="true" class="selectpicker text-left necls">
+								<option value="" selected>Select Cuisine</option>
 								{{#cuisines}}
 									<option value="{{CUISINEID}}">{{cuisine}}</option>
 								{{/cuisines}}
-							</script>
-                            <select name="cuisine" id="cuisinedropdown" data-native-menu="true" class="fd-customselect">
-                            	<option value="">Select Cuisine</option>
-                            </select>
+							</select>
+                            </script>
+                            <div id="cuisinedropdown"></div>
                             <div class="sep10px">&nbsp;</div>
                             
-                            <a href="" class="btn btn-lg btn-customorange fonsize16px customwidthsearchbtn" data-ajax="true">Find Restaurants</a>
+                            <a href="javascript:void(0)" class="btn btn-lg btn-customorange fonsize16px customwidthsearchbtn" id="buttonSearch" data-ajax="true">Find Restaurants</a>
+                            
+                            
                         
                     </div>
                     <div class="sep25px">&nbsp;</div>
                     <div class="sep25px">&nbsp;</div>
-                </div>
-            </div>
-            <div class="ui-footer customfooter">
-            	<div class="inset">
-                	Copyright &copy; FoodOnline is a product by Middle East Infoway <?=date('Y')?>. All Rights Reserved. Dubai Registered Company #532868
+                    
                 </div>
             </div>
         </div>
+        <div class="ui-footer customfooter">
+            <div class="inset">
+                Copyright &copy; FoodOnline is a product by Middle East Infoway. All Rights Reserved. Dubai Registered Company #532868
+            </div>
+        </div>
     </div>
-	
-    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/customdynamic.js"></script>
-    <script type="text/javascript">
-		app.initialize();
-	</script>
+	<!--SEARCH PAGE-->
+    <div data-role="page" data-theme='b' id="searchRestaurantsPage">
+     	<div data-role="panel" id="mypanel2" data-theme="a" class="sidepanel"></div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <div class='inset text-center'>
+            	<div class="sep15px">&nbsp;</div>
+            	<div class="pull-left">
+	                <a href='#mypanel2' data-inline='true'><img src="images/mobile-icon.jpg" class="img-responsive"></a>
+                </div>
+                <div class="pull-right">
+                <a href="#home" data-transition="slideup"><img src="images/food-online-logo.jpg"></a>
+                </div>
+                <div class="sep15px">&nbsp;</div>
+            </div>
+            <div class="fd-header">
+                <div class='inset'>
+                    <div class="pull-left">
+                        <a href="index.html" data-ajax="true"><i class='icon-home'>&nbsp;</i></a>
+                    </div>
+                    <div class="pull-right">
+                    	<a href="index.html" data-ajax="true"><i class='icon-user color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Login</span></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="index.html" data-ajax="true"><i class='ui-icon-shopping-cart color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Basket</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="content">   
+				
+            <div class="fd-bannerIndex" id="searchRestaurantResults">
+                
+                     <script id="searchrest-template" type="text/template">
+					 	
+						{{#searchrestaurant}}
+								<a href="#" onclick="loadRestaurantDetails({{RID}})">
+								<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 nopadding text-left">
+									<img src="http://www.foodonline.ae/uploads/pics/restaurants/{{image}}" class="img-responsive" />
+							    </div> 
+							    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8 text-left">		
+									<span class="h5"><strong>{{Res_name}}</strong></span><br>
+									<span class="h6">
+										{{cusine}}
+										<div class="sep5px">&nbsp;</div>
+										<span class="h6">{{areawithcity}}</span>
+									</span>
+								</div>
+								</a>
+								<div class="sep5px">&nbsp;</div>
+								<div class="bgyellow">
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding text-left h6">{{timings}}</div>
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding text-left h6"><strong>Minimum Order:</strong> {{min_rate}} AED</div>
+								</div>
+								<div class="sep5px">&nbsp;</div>
+						{{/searchrestaurant}}
+					</script>
+					<div class='inset'>
+						<div class="sep20px">&nbsp;</div>
+						<div id="makeDiv">
+							<div data-role="listview" data-filter="true" id="searchRestaurant" class="restaurantlist">
+							
+							</div>
+						</div>
+					</div>
+                
+            </div>
+        </div>
+        <div class="ui-footer customfooter">
+            <div class="inset">
+                Copyright &copy; FoodOnline is a product by Middle East Infoway. All Rights Reserved. Dubai Registered Company #532868
+            </div>
+        </div>
+    </div>
+    <!--RESTAURANTS DETAILS PAGE-->
+    <div data-role="page" data-theme='b' id="RestaurantDetailsPage">
+     	<div data-role="panel" id="mypanel3" data-theme="a" class="sidepanel"></div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <div class='inset text-center'>
+            	<div class="sep15px">&nbsp;</div>
+            	<div class="pull-left">
+	                <a href='#mypanel3' data-inline='true'><img src="images/mobile-icon.jpg" class="img-responsive"></a>
+                </div>
+                <div class="pull-right">
+                <a href="#home" data-transition="slideup"><img src="images/food-online-logo.jpg"></a>
+                </div>
+                <div class="sep15px">&nbsp;</div>
+            </div>
+            <div class="fd-header">
+                <div class='inset'>
+                    <div class="pull-left">
+                        <a href="#" data-rel="back" data-direction="reverse" class="text-white h4"><span class="glyphicon glyphicon-chevron-left h5 text-white"></span>&nbsp;</a>
+                    </div>
+                    <div class="pull-right">
+                    	<a href="index.html" data-ajax="true"><i class='icon-user color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Login</span></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="index.html" data-ajax="true"><i class='ui-icon-shopping-cart color-yellow'></i>&nbsp;&nbsp;<span class="topsmltxt">Basket</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="content">   
+				
+            <div class="fd-bannerIndex" id="RestaurantDetailsBlock">
+                
+                     <script id="restaurantdetails-template" type="text/template">
+					 	
+						{{#restaurantdetails}}
+							<div class="restdetailstop">
+								
+								<div class="sep10px">&nbsp;</div>
+								<div class="inset">
+									<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 nopadding text-left">
+										<img src="http://www.foodonline.ae/uploads/pics/restaurants/{{image}}" class="img-responsive" />
+									</div> 
+									<div class="col-lg-9 col-md-9 col-sm-8 col-xs-8 nopaddingright text-left">	
+										<div class="sep10px">&nbsp;</div>	
+										<span class="h5"><strong>{{Res_name}}</strong></span><br>
+										<span class="h6">
+											{{cusine}}
+											<div class="sep5px">&nbsp;</div>
+											<span class="h6">{{areawithcity}}</span><br>
+											<span class='h6'><strong>{{closeopen}}</strong></span>
+											<div class="sep5px">&nbsp;</div>
+											<span class='h6'>{{opentiming}}</span>
+											<div class="sep10px">&nbsp;</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="sep20px">&nbsp;</div>
+							
+								<div class='inset'>
+									{{#restaurantdetails}}
+										{{#restaurantdetails}} {{!Loop For Menu Categories}}
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custommenuheader h6">
+											<a href="#menuitem_{{menucount}}" data-toggle="collapse" data-parent="#accordion" onclick="onclickcollapse()">
+												<div class="pull-left">
+													<span class="text-white"><strong>{{menucategory}}</strong></span>
+												</div>	
+												<div class="pull-right">
+													<span class="glyphicon glyphicon-chevron-right text-white"></span>&nbsp;&nbsp;
+												</div>
+											</a>
+											</div>
+											<div class="sep5px">&nbsp;</div>
+											<div class="collapse col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding h5" id="menuitem_{{menucount}}">
+											{{#restaurantdetails}}
+												
+												{{#restaurantdetails}}
+													
+													{{itemname}}
+													
+												{{/restaurantdetails}}	
+												
+												
+											{{/restaurantdetails}}
+											</div>
+										{{/restaurantdetails}}
+									{{/restaurantdetails}}
+								</div>			
+							
+							<div class="sep5px">&nbsp;</div>
+						{{/restaurantdetails}}
+					</script>
+                    <div id="RestaurantDetailsDiv">
+                    	
+                    </div>
+					
+                
+            </div>
+        </div>
+        <div class="ui-footer customfooter">
+            <div class="inset">
+                Copyright &copy; FoodOnline is a product by Middle East Infoway. All Rights Reserved. Dubai Registered Company #532868
+            </div>
+        </div>
+    </div>
     </body>
 </html>

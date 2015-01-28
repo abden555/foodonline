@@ -11,7 +11,7 @@
 
 
 .ui-bar-b,.ui-body-b .ui-dialog-contain .ui-title {
-	border-bottom: 2px solid #FF7979;
+	/*border-bottom: 2px solid #FF7979;*/
 }
 
 .ui-btn-down-b .ui-btn-inner,.ui-btn-down-b .ui-btn-text .ui-link-inherit,.ui-listview .ui-btn-hover-b,.ui-input-search.ui-body-b {

@@ -1,10 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
+.nopadding { padding:0px !important; }
+.nopaddingleft { padding-left:0px !important; }
+.nopaddingright { padding-right:0px !important; }
 .fd-header { background:#a70a09 url(../images/top-header-bg.jpg) repeat-x bottom ; width:100%; display:inline-block; padding-top:5px; padding-bottom:10px; clear:both;  }
 .fd-header a { color:#fff !important; font-size:24px; }
 .topsmltxt { font-size:18px; font-weight:bold; }
 .color-yellow { color:#ffc600 !important }
-.searchBlock { border-radius:8px; border:5px solid rgba(80, 76, 71, .2); padding:15px; background:url(../images/form-bg.png); margin-top:50px; display:inline-block; width:97.0% }
+.searchBlock { border-radius:8px; border:5px solid rgba(80, 76, 71, .2); padding:15px; background:url(../images/form-bg.png); margin-top:50px; display:inline-block; width:100.0% }
 .fd-bannerIndex {
 	background:url(../images/food-online-banner.gif) no-repeat;
 	-webkit-background-size: cover !important;
@@ -23,7 +26,10 @@
 .ui-body-b form .ui-btn, .ui-body-b form .ui-mini.ui-checkbox-off, .ui-body-b form .ui-mini.ui-radio-off { background:none !important; }
 .customwidthsearchbtn { width:98%; background:url(../images/search-icon-btn.png) no-repeat right; text-transform:uppercase }
 .customfooter { background:#850807; padding-top:15px; padding-bottom:15px; color:#fff !important; text-align:center; font-size:13px;  }
-
+.sidepanel { background:#333; }
+.sidepanel ul { list-style-type:none; list-style:none; }
+.sidepanel ul li { padding:10px; border-bottom:1px solid #CCC; margin-left:-40px; color:#fff; }
+.sidepanel ul li a { color:#fff; font-size:13px; }
 
 /*----------------CUSTOM BOOTSTRAP BUTTONS--------------*/
 .btn {
@@ -776,6 +782,7 @@ fieldset[disabled] .btn-success.active {
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
+  
 }
 
 .btn-info:hover,
@@ -898,54 +905,55 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
-
+.ui-li { border:none !important; }
+.bgyellow { background:#ffc600; padding:10px; display:inline-block; width:100% }
+.restdetailstop { box-shadow:2px 2px 4px 3px #666; display:inline-block; width:100% }
+.custommenuheader { background:#850807; padding:10px; color:#fff; border-radius:4px; }
 @media only screen and (min-width : 240px) and (max-width : 320px) {
 		/*--- Mobile portrait ---*/
-		.percnet5 { width:100% !important; float:left }
-		.percnet10 { width:100% !important; float:left }
-		.percnet15 { width:100% !important; float:left }
-		.percnet20 { width:100% !important; float:left }
-		.percnet25 { width:100% !important; float:left }
-		.percnet30 { width:100% !important; float:left }
-		.percnet35 { width:100% !important; float:left }
-		.percnet40 { width:100% !important; float:left }
-		.percnet45 { width:100% !important; float:left }
-		.percnet50 { width:100% !important; float:left }
-		.percnet55 { width:100% !important; float:left }
-		.percnet60 { width:100% !important; float:left }
-		.percnet65 { width:100% !important; float:left }
-		.percnet70 { width:100% !important; float:left }
-		.percnet75 { width:100% !important; float:left }
-		.percnet80 { width:100% !important; float:left }
-		.percnet85 { width:100% !important; float:left }
-		.percnet90 { width:100% !important; float:left }
-		.percnet95 { width:100% !important; float:left }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
 		.percnet100 { width:100%; float:left }
 		
-		.perauto20 { width:100%; margin:auto; }
-		.perauto30 { width:100%; margin:auto; }
-		.perauto35 { width:100%; margin:auto; }
-		.perauto40 { width:100%; margin:auto; }
-		.perauto45 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto65 { width:100%; margin:auto; }
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto80 { width:100%; margin:auto}
-		.perauto85 { width:100%; margin:auto}
-		.perauto90 { width:100%; margin:auto}
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
 		.perauto95 { width:95%; margin:auto}
 
-		.percnet65 { width:100%; float:none; }
-		.percnet60 { width:100% !important; float:none; }
-		.customper90 { width:100%; font-size:13px; }
+		
 		
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:90% }
+		.searchBlock { padding:10px; width:100% }
 		.orderdetailshd  {background-image:none !important; }
 		.smallperleft { padding-left:2.4%; }
 		.customwidthsearchbtn { width:90% !important; }
@@ -953,157 +961,129 @@ input[type="button"].btn-block {
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 		/*--- Mobile portrait ---*/
-		.percnet5 { width:100% !important; float:left }
-		.percnet10 { width:100% !important; float:left }
-		.percnet15 { width:100% !important; float:left }
-		.percnet20 { width:100% !important; float:left }
-		.percnet25 { width:100% !important; float:left }
-		.percnet30 { width:100% !important; float:left }
-		.percnet35 { width:100% !important; float:left }
-		.percnet40 { width:100% !important; float:left }
-		.percnet45 { width:100% !important; float:left }
-		.percnet50 { width:100% !important; float:left }
-		.percnet55 { width:100% !important; float:left }
-		.percnet60 { width:100% !important; float:left }
-		.percnet65 { width:100% !important; float:left }
-		.percnet70 { width:100% !important; float:left }
-		.percnet75 { width:100% !important; float:left }
-		.percnet80 { width:100% !important; float:left }
-		.percnet85 { width:100% !important; float:left }
-		.percnet90 { width:100% !important; float:left }
-		.percnet95 { width:100% !important; float:left }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
 		.percnet100 { width:100%; float:left }
-		.perauto80 { width:100%; margin:auto}
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto90 { width:100%; margin:auto}
-		.percnet65 { width:100% !important; float:none; }
-		.percnet60 { width:100% !important; float:none; }
 		
-		.perauto20 { width:100%; margin:auto; }
-		.perauto30 { width:100%; margin:auto; }
-		.perauto35 { width:100%; margin:auto; }
-		.perauto40 { width:100%; margin:auto; }
-		.perauto45 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto65 { width:100%; margin:auto; }
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto80 { width:100%; margin:auto}
-		.perauto85 { width:100%; margin:auto}
-		.perauto90 { width:100%; margin:auto}
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
 		.perauto95 { width:95%; margin:auto}
-		.customper90 { width:100%; font-size:13px; }
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:92% }
+		.searchBlock { padding:10px; width:100% }
 		.customwidthsearchbtn { width:92% !important; }
 }
 @media only screen and (min-width : 480px) and (max-width : 595px) {
-		.percnet5 { width:100% !important; float:left }
-		.percnet10 { width:100% !important; float:left }
-		.percnet15 { width:100% !important; float:left }
-		.percnet20 { width:100% !important; float:left }
-		.percnet25 { width:100% !important; float:left }
-		.percnet30 { width:100% !important; float:left }
-		.percnet35 { width:100% !important; float:left }
-		.percnet40 { width:100% !important; float:left }
-		.percnet45 { width:100% !important; float:left }
-		.percnet50 { width:100% !important; float:left }
-		.percnet55 { width:100% !important; float:left }
-		.percnet60 { width:100% !important; float:left }
-		.percnet65 { width:100% !important; float:left }
-		.percnet70 { width:100% !important; float:left }
-		.percnet75 { width:100% !important; float:left }
-		.percnet80 { width:100% !important; float:left }
-		.percnet85 { width:100% !important; float:left }
-		.percnet90 { width:100% !important; float:left }
-		.percnet95 { width:100% !important; float:left }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
 		.percnet100 { width:100%; float:left }
-		/*--- Mobile landscape ---*/
-		.perauto80 { width:100%; margin:auto}
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto90 { width:100%; margin:auto}
-		.percnet65 { width:100% !important; float:none; }
-		.percnet60 { width:100% !important; float:none; }
-		.perauto20 { width:100%; margin:auto; }
-		.perauto30 { width:100%; margin:auto; }
-		.perauto35 { width:100%; margin:auto; }
-		.perauto40 { width:100%; margin:auto; }
-		.perauto45 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto65 { width:100%; margin:auto; }
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto80 { width:100%; margin:auto}
-		.perauto85 { width:100%; margin:auto}
-		.perauto90 { width:100%; margin:auto}
+		
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
 		.perauto95 { width:95%; margin:auto}
-		.customper90 { width:100%; font-size:13px; }
 		.customwidthsearchbtn { width:95% !important; }
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:93% }
+		.searchBlock { padding:10px; width:100% }
 		
 
 }
 @media only screen and (min-width : 595px) and (max-width : 690px) {
-		.percnet5 { width:100% !important; float:left }
-		.percnet10 { width:100% !important; float:left }
-		.percnet15 { width:100% !important; float:left }
-		.percnet20 { width:100% !important; float:left }
-		.percnet25 { width:100% !important; float:left }
-		.percnet30 { width:100% !important; float:left }
-		.percnet35 { width:100% !important; float:left }
-		.percnet40 { width:100% !important; float:left }
-		.percnet45 { width:100% !important; float:left }
-		.percnet50 { width:100% !important; float:left }
-		.percnet55 { width:100% !important; float:left }
-		.percnet60 { width:100% !important; float:left }
-		.percnet65 { width:100% !important; float:left }
-		.percnet70 { width:100% !important; float:left }
-		.percnet75 { width:100% !important; float:left }
-		.percnet80 { width:100% !important; float:left }
-		.percnet85 { width:100% !important; float:left }
-		.percnet90 { width:100% !important; float:left }
-		.percnet95 { width:100% !important; float:left }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
 		.percnet100 { width:100%; float:left }
-		/*--- Small tablet portrait ---*/
-		.perauto80 { width:100%; margin:auto}
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto90 { width:100%; margin:auto}
 		
-		.perauto20 { width:100%; margin:auto; }
-		.perauto30 { width:100%; margin:auto; }
-		.perauto35 { width:100%; margin:auto; }
-		.perauto40 { width:100%; margin:auto; }
-		.perauto45 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto65 { width:100%; margin:auto; }
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto80 { width:100%; margin:auto}
-		.perauto85 { width:100%; margin:auto}
-		.perauto90 { width:100%; margin:auto}
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
 		.perauto95 { width:95%; margin:auto}
 		.smallperleft { padding-left:16%; }
 		.percnet65 { width:100% !important; float:none; }
@@ -1112,77 +1092,95 @@ input[type="button"].btn-block {
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:95% }
+		.searchBlock { padding:10px; width:100% }
 		.customwidthsearchbtn { width:96% !important; }
 		
 }
 @media only screen and (min-width : 690px) and (max-width : 786px) {
-		.percnet5 { width:100% !important; float:left }
-		.percnet10 { width:100% !important; float:left }
-		.percnet15 { width:100% !important; float:left }
-		.percnet20 { width:100% !important; float:left }
-		.percnet25 { width:100% !important; float:left }
-		.percnet30 { width:100% !important; float:left }
-		.percnet35 { width:100% !important; float:left }
-		.percnet40 { width:100% !important; float:left }
-		.percnet45 { width:100% !important; float:left }
-		.percnet50 { width:100% !important; float:left }
-		.percnet55 { width:100% !important; float:left }
-		.percnet60 { width:100% !important; float:left }
-		.percnet65 { width:100% !important; float:left }
-		.percnet70 { width:100% !important; float:left }
-		.percnet75 { width:100% !important; float:left }
-		.percnet80 { width:100% !important; float:left }
-		.percnet85 { width:100% !important; float:left }
-		.percnet90 { width:100% !important; float:left }
-		.percnet95 { width:100% !important; float:left }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
 		.percnet100 { width:100%; float:left }
-		/*--- Tablet portrait ---*/
-		.perauto80 { width:100%; margin:auto}
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto90 { width:100%; margin:auto}
 		
-		.perauto20 { width:100%; margin:auto; }
-		.perauto30 { width:100%; margin:auto; }
-		.perauto35 { width:100%; margin:auto; }
-		.perauto40 { width:100%; margin:auto; }
-		.perauto45 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto65 { width:100%; margin:auto; }
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto80 { width:100%; margin:auto}
-		.perauto85 { width:100%; margin:auto}
-		.perauto90 { width:100%; margin:auto}
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
 		.perauto95 { width:95%; margin:auto}
-		
-		.customper90 { width:100%; font-size:13px; }
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:96% }
+		.searchBlock { padding:10px; width:100% }
 		.customwidthsearchbtn { width:97% !important; }
 		
 }
 @media only screen and (min-width : 786px) and (max-width : 800px) {
-		.perauto80 { width:100%; margin:auto}
-		.perauto70 { width:100%; margin:auto; }
-		.perauto75 { width:100%; margin:auto; }
-		.perauto60 { width:100%; margin:auto; }
-		.perauto55 { width:100%; margin:auto; }
-		.perauto50 { width:100%; margin:auto; }
-		.perauto90 { width:100%; margin:auto}
-		.customper90 { width:100%; font-size:13px; }
+		.percnet5 { width:5% !important; float:left }
+		.percnet10 { width:10% !important; float:left }
+		.percnet15 { width:15% !important; float:left }
+		.percnet20 { width:20% !important; float:left }
+		.percnet25 { width:25% !important; float:left }
+		.percnet30 { width:30% !important; float:left }
+		.percnet35 { width:35% !important; float:left }
+		.percnet40 { width:40% !important; float:left }
+		.percnet45 { width:45% !important; float:left }
+		.percnet50 { width:50% !important; float:left }
+		.percnet55 { width:55% !important; float:left }
+		.percnet60 { width:60% !important; float:left }
+		.percnet65 { width:65% !important; float:left }
+		.percnet70 { width:70% !important; float:left }
+		.percnet75 { width:75% !important; float:left }
+		.percnet80 { width:80% !important; float:left }
+		.percnet85 { width:85% !important; float:left }
+		.percnet90 { width:90% !important; float:left }
+		.percnet95 { width:95% !important; float:left }
+		.percnet100 { width:100%; float:left }
+		
+		.perauto20 { width:20%; margin:auto; }
+		.perauto30 { width:30%; margin:auto; }
+		.perauto35 { width:35%; margin:auto; }
+		.perauto40 { width:40%; margin:auto; }
+		.perauto45 { width:45%; margin:auto; }
+		.perauto50 { width:50%; margin:auto; }
+		.perauto55 { width:55%; margin:auto; }
+		.perauto60 { width:60%; margin:auto; }
+		.perauto65 { width:65%; margin:auto; }
+		.perauto70 { width:70%; margin:auto; }
+		.perauto75 { width:75%; margin:auto; }
+		.perauto80 { width:80%; margin:auto}
+		.perauto85 { width:85%; margin:auto}
+		.perauto90 { width:90%; margin:auto}
+		.perauto95 { width:95%; margin:auto}
 		.smallcenter { text-align:center; }
 		.smallleft { text-align:left; }
 		.smallright { text-align:right; }
-		.searchBlock { padding:10px; width:96% }
+		.searchBlock { padding:10px; width:100% }
 		.customwidthsearchbtn { width:97% !important; }
 		
 }
@@ -1198,7 +1196,7 @@ input[type="button"].btn-block {
 	.smallcenter { text-align:center; }
 	.smallleft { text-align:left; }
 	.smallright { text-align:right; }
-	.searchBlock { padding:10px; width:97% }
+	.searchBlock { padding:10px; width:100% }
 	.customwidthsearchbtn { width:97% !important; }
 	
 }
@@ -1212,12 +1210,12 @@ input[type="button"].btn-block {
 		.perauto50 { width:100%; margin:auto; }
 		.perauto90 { width:100%; margin:auto}
 		.customper90 { width:100%; font-size:13px; }
-		.searchBlock { padding:10px; width:96% }
+		.searchBlock { padding:10px; width:100% }
 		.customwidthsearchbtn { width:98% !important; }
 		
 }
 @media only screen and (min-width : 1024px) and (max-width : 1224px) {
-	.searchBlock { padding:10px; width:97% }
+	.searchBlock { padding:10px; width:100% }
 }
 
 @media only screen and (min-width : 1225px) and (max-width : 1280px) {
