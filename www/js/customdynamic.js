@@ -7,14 +7,32 @@ $(function() {
 $(function() {
 	
 	//To get cities
-	$.getJSON(main_url+'mobileapp/getcities',function(data){
+	$.ajax({
+			dataType:"JSON",
+			cache:false,
+			type:"POST",
+			url:main_url+'mobileapp/getcities',
+			data:"",
+			success: function(data) {
+				var template = $("#city-template").html();
+				var info = Mustache.to_html(template,data);
+				//alert(data);
+				$("#citydropdown").html(info);
+				$('.selectpicker').selectpicker({
+					style: 'btn-customsearch'
+				});	
+			}
+	});
+	
+	/*$.getJSON(main_url+'mobileapp/getcities',function(data){
 			var template = $("#city-template").html();
 			var info = Mustache.to_html(template,data);
+			alert(data);
 			$("#citydropdown").html(info);
 			$('.selectpicker').selectpicker({
 				style: 'btn-customsearch'
 			});	
-	});
+	});*/
 	
 	//To get areas
 	$.getJSON(main_url+'mobileapp/getareas',function(data){

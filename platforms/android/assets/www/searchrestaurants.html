@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.css" />
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.light.css"  id='jQMnDTheme' />
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.red.css" id='jQMnDColor' />
+		<!-- jQuery / jQueryMobile Scripts -->
+        <!-- Custom / Abden Nasir Css -->
+        <link rel="stylesheet" href="css/jquerymobilecustom.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/mustache.min.js"></script>
+        
+<script id="searchrest-template" type="text/template">
+	<link rel="stylesheet" href="css/jquerymobile.css" />
+	{{#searchrestaurant}}
+		<li><a href="#" onclick="loadRestaurantDetails({{orderurl}})">
+			<img src="http://project3/foodonline2/uploads/pics/restaurants/{{image}}" />
+			<h2>{{Res_name}}</h2>
+			<p>{{cusine}}<br>{{cusine}}</p></a>
+			
+		</li>
+	{{/searchrestaurant}}
+</script>
+<div class='inset'>
+	<div class="sep20px">&nbsp;</div>
+	<div>
+    	<ul data-theme='b' data-role="listview" data-inset="true" id="searchRestaurant">
+        
+        </ul>
+    </div>
+</div>
